@@ -1,0 +1,11 @@
+<div class="skill-list">
+    <div class="skill-item">
+        @for (item of skills; track $index) {
+            <img [src]="item.logo" alt="{{ item.name }}" class="skill-image">
+            <div class="skill-text">
+                <p class="skill-name">{{ item.name }}</p>
+                <p class="skill-project">{{ item.projects}}</p>
+            </div>
+        }
+    </div>
+</div>
