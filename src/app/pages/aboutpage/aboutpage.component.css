@@ -54,3 +54,11 @@
     line-height: 1.5;
     text-align: justify;
 }
+
+.skills-container{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
