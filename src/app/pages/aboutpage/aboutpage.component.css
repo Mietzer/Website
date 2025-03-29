@@ -3,7 +3,6 @@
     padding-top: 80px;
     height: calc(100vh - 80px);
     width: 100%;
-    margin: 0;
     display: flex;
     flex-direction: column;
     position: absolute;
@@ -11,26 +10,52 @@
     z-index: -1;
 }
 
-.content-container{
+.page-container {
+    margin-top: 80px;
     display: flex;
-    flex-direction: row;
-    padding: 0 40px;
-    gap: 30px;
-    max-height: 100%;
+    flex-direction: column; /* Ordnet die Inhalte vertikal an */
+    align-items: center; /* Zentriert die Inhalte horizontal */
+    gap: 30px; /* Abstand zwischen den Elementen */
+    width: 100%; /* Nimmt die gesamte Breite des Containers ein */
+    height: 100%; /* Nimmt die gesamte Höhe des Containers ein */
     box-sizing: border-box;
 }
 
-.image-container{
-    flex-shrink: 0;
+.content-container {
+    display: flex;
+    flex-direction: row; /* Ordnet Bild und Text nebeneinander an */
+    align-items: center; /* Zentriert die Inhalte vertikal */
+    justify-content: flex-start; /* Richtet die Inhalte bündig am linken Rand aus */
+    gap: 40px; /* Abstand zwischen Bild und Text */
+    width: 100%; /* Nimmt die volle Breite des Containers ein */
+    max-width: 1920px; /* Begrenze die Breite für bessere Lesbarkeit */
+    box-sizing: border-box;
+    padding: 0; /* Gleicher Abstand links und rechts */
 }
 
-.mietzey{
-    max-width: 100%;
+.image-container {
+    flex-shrink: 0; /* Verhindert, dass das Bild skaliert wird */
+    display: flex;
+    justify-content: flex-start; /* Richtet das Bild bündig am linken Rand aus */
+    width: auto; /* Passt die Breite an den Inhalt an */
+}
+
+.mietzey {
+    max-width: 100%; /* Passt das Bild an die Breite des Containers an */
     height: auto;
-    border:#1B262C solid;
+    border: 2px #3282B8 solid;
     border-radius: 10px;
     transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
     transform: perspective(1000px) rotateX(0) translateZ(0);
+}
+
+.skills-container {
+    display: flex;
+    justify-content: flex-start; /* Richtet die Skillbar bündig am linken Rand aus */
+    align-items: center; /* Zentriert die Inhalte vertikal */
+    width: 100%; /* Nimmt die volle Breite des Containers ein */
+    max-width: 1920px; /* Begrenze die Breite der Skillbar */
+    padding: 0; /* Gleicher Abstand links und rechts */
 }
 
 .mietzey:hover {
@@ -51,14 +76,6 @@
     margin: 10px 0;
     white-space: pre-wrap;
     font-family: Arial, Helvetica, sans-serif;
-    line-height: 1.5;
+    line-height: 1.75;
     text-align: justify;
-}
-
-.skills-container{
-    margin-top: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
 }
